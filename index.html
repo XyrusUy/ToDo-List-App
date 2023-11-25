@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 >LIST OF TASK</h1>
+        <form id="new-task-form">
+            <input 
+                type="text"
+                id="new-task-input"
+                placeholder="What are you planning to do now?"/>
+            <input 
+                type="submit"
+                id="new-task-submit"
+                value="Add TASK" />
+            <div class="select">
+                <select name="todos" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="complete">Complete</option>
+                    <option value="incomplete">Incomplete</option>
+                </select>
+            </div>
+        </form>
+    </header>
+
+    <main>
+        <section class="task-list">
+            <h2>TASK:</h2>
+            <div id="tasks">
+                <!-- <div class="task">
+                    <div class="content">
+                        <input 
+                            type="text"
+                            class="text"
+                            value="My shiny task"
+                            readonly
+                            />
+                    </div>
+                    <div class="actions">
+                        <button class="edit">EDIT</button>
+                        <button class="delete">DELETE</button>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="content">
+                        <input 
+                            type="text"
+                            class="text"
+                            value="My shiny task"
+                            readonly
+                            />
+                    </div>
+                    <div class="actions">
+                        <button class="edit">EDIT</button>
+                        <button class="delete">DELETE</button>
+                    </div>
+                    
+                </div> -->
+            </div>
+            
+        </section>
+    </main>
+    
+    <script src="main.js"></script>
+</body>
+</html>

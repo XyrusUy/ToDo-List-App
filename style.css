@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("b.jpg");
+    color: white;
+}
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: blue;
+    margin-bottom: 1rem;
+
+}
+#new-task-form {
+    display:flex;
+}
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: rgba(20, 19, 19, 0.801);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.3rem;
+}
+#new-task-input::placeholder {
+    color: gray;
+}
+#new-task-submit {
+    color: rgb(131, 38, 54);
+    font-size: 1rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, rgb(253, 0, 127), rgb(255, 0, 255));
+    cursor: pointer;
+    transition: 0.2s
+}
+#new-task-submit:hover {
+    opacity: 0.5;
+}
+#new-task-submit:active {
+    opacity: 0.2;
+}
+main {
+    flex: 2 2 0%;
+    padding: 2rem 2 rem;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+.task-list {
+    padding: 1rem;
+}
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(31, 22, 22);
+    margin-bottom: 1rem;
+}
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(51, 40, 40, 0.521);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+#tasks .task .content {
+    flex: 1 1 0%;
+}
+#tasks .list .content .text {
+    color: antiquewhite;
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+#tasks .list .content .text:not(:read-only) {
+    color: rgb(141, 25, 63);
+}
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.task .actions button:hover {
+    opacity: 0.8;
+}
+.task .actions button:active {
+    opacity: 0.6;
+}
+.task .actions .edit {
+    background-image: linear-gradient(to right, rgb(253, 0, 127), rgb(255, 0, 255));
+}
+.task .actions .delete {
+    color: rgb(160, 22, 22);
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+select {
+    color: blueviolet;
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+}
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: red;
+    top:0;
+    right:0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover:after {
+    background: whitesmoke;
+    color: blueviolet;
+}
